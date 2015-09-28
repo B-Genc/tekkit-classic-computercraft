@@ -1,0 +1,26 @@
+local x, y = ...
+lastLeft = false
+turtle.digDown()
+turtle.placeDown()
+for i=x-1,1,-1 do
+	for k=y-1,1,-1 do
+		turtle.forward()
+		turtle.digDown()
+		turtle.placeDown()
+	end
+	
+	turtle.digDown()
+	turtle.placeDown()
+	
+	if lastLeft == true do
+		turtle.turnRight()
+		turtle.forward()
+		turtle.turnRight()
+	else
+		turtle.turnLeft()
+		turtle.forward()
+		turtle.turnLeft()
+	end
+	
+	turtle.digDown()
+	turtle.placeDown()
